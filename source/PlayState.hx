@@ -238,22 +238,7 @@ class PlayState extends MusicBeatState
 		repPresses = 0;
 		repReleases = 0;
 
-		executeModchart = FileSystem.exists(Paths.lua(PlayState.SONG.song.toLowerCase()  + "/modchart"));
-
-		if (!executeModchart && openfl.utils.Assets.exists("assets/data/" + SONG.song.toLowerCase()  + "/modchart.lua"))
-		{
-			var path = Paths.luaAsset(SONG.song.toLowerCase()  + "/modchart");
-			var luaFile = openfl.Assets.getBytes(path);
-
-			FileSystem.createDirectory(Main.path + "assets");
-			FileSystem.createDirectory(Main.path + "assets/data");
-			FileSystem.createDirectory(Main.path + "assets/data/" + SONG.song.toLowerCase());
-
-
-			File.saveBytes(Paths.lua(SONG.song.toLowerCase()  + "/modchart"), luaFile);
-
-			executeModchart = FileSystem.exists(Paths.lua(SONG.song.toLowerCase()  + "/modchart"));
-		}
+		executeModchart = OpenFlAssets.exists("assets/data/" + PlayState.SONG.song.toLowerCase()  + "/modchart.lua");
 
 		#if windows
 		// Making difficulty text for Discord Rich Presence.
