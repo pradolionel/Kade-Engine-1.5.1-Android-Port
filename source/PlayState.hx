@@ -60,7 +60,7 @@ import Discord.DiscordClient;
 import Sys;
 import sys.FileSystem;
 import sys.io.File;
-import openfl.Assets;
+import openfl.utils.Assets as OpenFlAssets;
 
 using StringTools;
 
