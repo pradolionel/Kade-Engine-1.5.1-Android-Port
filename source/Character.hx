@@ -140,7 +140,7 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 			case 'grenny':
-                                // DAD ANIMATION LOADING CODE
+                                // ESPERA AHI
                                 tex = Paths.getSparrowAtlas('characters/fnf_greeny', 'shared');
                                 frames = tex;
                                 animation.addByPrefix('idle', 'IDLE', 24);
