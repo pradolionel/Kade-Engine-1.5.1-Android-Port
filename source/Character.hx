@@ -139,6 +139,40 @@ class Character extends FlxSprite
 				addOffset("singDOWN", 0, -30);
 
 				playAnim('idle');
+			case 'grenny':
+126
+                                // DAD ANIMATION LOADING CODE
+127
+                                tex = Paths.getSparrowAtlas('characters/fnf_grenny', 'shared');
+128
+                                frames = tex;
+129
+                                animation.addByPrefix('idle', 'Dad idle dance', 24);
+130
+                                animation.addByPrefix('singUP', 'Dad Sing Note UP', 24);
+131
+                                animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24);
+132
+                                animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24);
+133
+                                animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24);
+134
+​
+135
+                                addOffset('idle');
+136
+                                addOffset("singUP", -6, 50);
+137
+                                addOffset("singRIGHT", 0, 27);
+138
+                                addOffset("singLEFT", -10, 10);
+139
+                                addOffset("singDOWN", 0, -30);
+140
+​
+141
+                                playAnim('idle');
+			
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
 				frames = tex;
